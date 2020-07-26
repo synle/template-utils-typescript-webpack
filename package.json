@@ -1,0 +1,32 @@
+{
+  "name": "new_project_name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "build": "rm -rf build/* && tsc",
+    "format": "prettier --config ./.prettierrc --write **/**/**/**/*.{ts,tsx,js,jsx,scss} *.{json,MD}",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synle/template-typescript-utils.git"
+  },
+  "author": "Sy Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synle/template-typescript-utils/issues"
+  },
+  "homepage": "https://github.com/synle/template-typescript-utils#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.23",
+    "jest": "^26.1.0",
+    "prettier": "1.19.1",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.8.3"
+  }
+}
