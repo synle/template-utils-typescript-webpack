@@ -1,7 +1,7 @@
 {
   "name": "some_js_util",
   "version": "1.0.0",
-  "description": "description about some_js_util",
+  "description": "some_js_util utilities",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
