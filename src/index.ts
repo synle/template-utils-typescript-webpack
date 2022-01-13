@@ -1,1 +1,5 @@
-console.log('Hello World')
+export default {
+  sum(a: number, b: number): number {
+    return a + b;
+  },
+};
