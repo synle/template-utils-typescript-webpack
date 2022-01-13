@@ -9,4 +9,5 @@ module.exports = {
     'restapi-typescript-decorators': '<rootDir>/src/index',
   },
   collectCoverage: true,
+  moduleDirectories: ['node_modules', '.'],
 };

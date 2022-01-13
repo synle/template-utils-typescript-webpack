@@ -1,4 +1,4 @@
-import Calculator from './index';
+import Calculator from 'src/index';
 
 test('Sum should work for positive numbers', () => {
   expect(Calculator.sum(1, 2)).toBe(3);

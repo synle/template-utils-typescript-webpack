@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npx ts-node src/index.ts",
     "build": "rm -rf build/* && tsc",
-    "format": "prettier --config ./.prettierrc --write **/**/**/**/*.{ts,tsx,js,jsx,scss} *.{json,MD}",
+    "format": "prettier --config ./.prettierrc --write src/**/**/**/**/*.{ts,tsx,js,jsx,scss} *.{ts,js,json,MD}",
     "test": "jest"
   },
   "repository": {
