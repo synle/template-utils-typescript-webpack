@@ -1,6 +1,6 @@
 {
   "name": "some_js_util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "some_js_util utilities",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -8,7 +8,8 @@
     "start": "npx ts-node src/index.ts",
     "build": "rm -rf build/* && tsc",
     "format": "prettier --config ./.prettierrc --write src/**/**/**/**/*.{ts,tsx,js,jsx,scss} *.{ts,js,json,MD}",
-    "test": "jest"
+    "test": "jest",
+    "test-ci": "jest"
   },
   "repository": {
     "type": "git",
