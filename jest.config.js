@@ -1,13 +1,18 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
-  testMatch: ['**/__tests__/**/*+(spec|test).+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
+  roots: ['<rootDir>'],
+  testMatch: ['**/*+(spec|test).+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   setupFilesAfterEnv: ['./jest.setup.js'],
   moduleNameMapper: {
-    'restapi-typescript-decorators': '<rootDir>/src/index',
+    '^src/(.*)': '<rootDir>/src/$1',
   },
   collectCoverage: true,
   moduleDirectories: ['node_modules', '.'],
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.json',
+    },
+  },
 };

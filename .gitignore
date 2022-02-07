@@ -60,3 +60,5 @@ typings/
 # src/**/*.js
 .env
 build
+package-lock.json
+main.js

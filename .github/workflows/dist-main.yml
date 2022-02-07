@@ -1,8 +1,7 @@
-name: pr-build
+name: dist-main
 
 on:
-  pull_request:
-    branches: [master, main]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,11 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org/
+      - run: TAG_MODE='stable' node .github/setupTag.js
       - run: npm install
-      - run: npm run test-ci
+      - run: npm test
       - run: npm run build
-      - run: npm version --no-git-tag-version patch
-      - run: npm run format
-      - uses: EndBug/add-and-commit@v8
-        with:
-          message: 'CI / CD - Prettier Automatic Commit'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
